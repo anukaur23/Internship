@@ -1,0 +1,225 @@
+/* ================= MOBILE FIRST ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    background-color: #f8f0e3;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background-color: #5d4037;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffe0b2;
+    font-weight: bold;
+    padding: 0.75rem;
+    display: block;
+    min-height: 44px;
+}
+
+/* Hero */
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Main */
+
+main {
+    width: 95%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+/* Sections */
+
+section {
+    background-color: #fff8f0;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 8px;
+}
+
+/* Menu Grid */
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+article {
+    background-color: #efebe9;
+    padding: 1rem;
+    border-left: 5px solid #8d6e63;
+}
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Only coffee33 & coffee4 custom size */
+
+.gallery img[src="image/coffee33.jpg"],
+.gallery img[src="image/coffee4.jpg"] {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* Contact Form */
+
+#contact  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#contact input {
+    padding: 0.7rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 0.7rem;
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #3e2723;
+}
+
+/* Footer */
+
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 769px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= DESKTOP ================= */
+
+@media (min-width: 1025px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ===== Special Offers Left & Contact Right ===== */
+
+    #offers {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    #contact {
+        float: right;
+        width: 48%;
+    }
+/* LIGHT MODE */
+
+.light-mode {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.light-mode header {
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.light-mode section {
+    background-color: #ffffff;
+}
+
+.light-mode button {
+    background-color: #ddd;
+    color: #222;
+}
+
+.light-mode input {
+    background-color: #ffffff;
+    color: #222;
+    border: 1px solid#ccc;
+}
+.theme-btn {
+    padding: 1.5px 1.5px;
+    font-size: 11px;
+    border-radius: 9px;
+}
+}
